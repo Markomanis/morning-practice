@@ -26,7 +26,7 @@ while parrot != 'quit':
     print(f"{parrot}")
     print(f"Play again or type 'quit in order to stop the game.'")
       
-Pizza toppings program:
+# Pizza toppings program:
 choose_topping = []
 topping = ''
 while topping != 'quit':
