@@ -44,5 +44,5 @@ while True:
     if answer == 'n':
         continue
 
-make_album(artist_name, album_name)  
+make_album(artist_name, album_name )  
 
