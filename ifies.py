@@ -94,7 +94,7 @@ for new_user in new_users:
     if new_user.lower() not in current_users:
         print(f"Name approved, welcome {new_user}")
     else:
-#         print(f"Name {new_user} already exists, create new punk")    
+         print(f"Name {new_user} already exists, create new punk")    
 
 numbers = [num for num in range(1,10)]
 
