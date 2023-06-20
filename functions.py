@@ -55,21 +55,49 @@
 # show_messages(short_messages)
 
 
-old_messages = ['yo', 'hey', 'booya']
-new_messages = []
+# old_messages = ['yo', 'hey', 'booya']
+# new_messages = []
 
-print(f"Original Old list: {old_messages}")
-print(f"Original New list: {new_messages}")
+# print(f"Original Old list: {old_messages}")
+# print(f"Original New list: {new_messages}")
 
-def send_message(old_mess, new_mess):
-    while old_mess:
-        message = old_mess.pop()
-        new_mess.append(message)
+# def send_message(old_mess, new_mess):
+#     while old_mess:
+#         message = old_mess.pop()
+#         new_mess.append(message)
 
-    print(f"\nFunction Old list: {old_mess}.")
-    print(f"Function New list: {new_mess}.")
+#     print(f"\nFunction Old list: {old_mess}.")
+#     print(f"Function New list: {new_mess}.")
 
-send_message(old_messages[:], new_messages)
+# send_message(old_messages[:], new_messages)
 
-print(f"\n Original Old list: {old_messages}")
-print(f"New list: {new_messages}")
+# print(f"\n Original Old list: {old_messages}")
+# print(f"New list: {new_messages}")
+
+# sandwich = []
+# def make_sandwich(*ingredients):
+#     for ingredient in ingredients:
+#         sandwich.append(ingredient)
+#     print(f"Enjoy your sandwich from: {sandwich}")
+
+# make_sandwich('anchovies', 'turkey')
+# make_sandwich('anchovies', 'turkey', 'rukola', 'macaroni')
+
+# def build_profile(first, last, **user_info):
+#     user_info['first_name'] = first
+#     user_info['last_name'] = last
+#     return user_info
+
+# user_profile = build_profile('Michael', 'Flexson', origin = 'Amerika', 
+#                               race = 'Black', net = 'a lot')
+
+# print(user_profile)
+
+def car_info(manufacturer, model, **kwargs):
+    kwargs['manufacturer'] = manufacturer
+    kwargs['model'] = model
+    return kwargs
+
+car = car_info('Elon Musk', 'Tesla', color='black', engine='good')
+
+print(car)
