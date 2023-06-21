@@ -1,57 +1,71 @@
-class Restaurant:
+# class Restaurant:
     
-    def  __init__(self, restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
-        self.number_served = 0
+#     def  __init__(self, restaurant_name, cuisine_type):
+#         self.restaurant_name = restaurant_name
+#         self.cuisine_type = cuisine_type
+#         self.number_served = 0
 
-    def describe_restaurant(self):
-        print(f"{self.restaurant_name} focus on {self.cuisine_type} kitchen.")
+#     def describe_restaurant(self):
+#         print(f"{self.restaurant_name} focus on {self.cuisine_type} kitchen.")
 
-    def open_restaurant(self):
-        print(f"{self.restaurant_name} is now open.")
+#     def open_restaurant(self):
+#         print(f"{self.restaurant_name} is now open.")
 
-    def customers_served(self):
-        print(f"Customers served: {self.number_served}")
+#     def customers_served(self):
+#         print(f"Customers served: {self.number_served}")
     
-    def update_served(self, num):
-        self.number_served = num
+#     def update_served(self, num):
+#         self.number_served = num
     
-    def increment_served(self, inc):
-        self.number_served += inc
+#     def increment_served(self, inc):
+#         self.number_served += inc
 
 
-class IceCreamStand(Restaurant):
-    def __init__(self, restaurant_name, cuisine_type, flavours):
-        super().__init__(restaurant_name, cuisine_type)
-        self.flavours = flavours
+# class IceCreamStand(Restaurant):
+#     def __init__(self, restaurant_name, cuisine_type, flavours):
+#         super().__init__(restaurant_name, cuisine_type)
+#         self.flavours = flavours
 
-    def flavours_display(self):
-        print(f"Available flavours are: {self.flavours}")
+#     def flavours_display(self):
+#         print(f"Available flavours are: {self.flavours}")
 
-flavours_list = ['chocolate', 'vanilla', 'banana']
-menu = IceCreamStand('Fratelli', 'Gelato', flavours_list)
+# flavours_list = ['chocolate', 'vanilla', 'banana']
+# menu = IceCreamStand('Fratelli', 'Gelato', flavours_list)
 
-menu.flavours_display()
+# menu.flavours_display()
 
-#     def __init__(self, first_name, last_name, age):
-#         self.first_name = first_name
-#         self.last_name = last_name
-#         self.age = age
-#         self.login_attempts = 0
+class User():
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.login_attempts = 0
 
-#     def describe_user(self):
-#         print(f"User name: {self.first_name}, {self.last_name}"
-#               f" age of: {self.age}")
+    def describe_user(self):
+        print(f"User name: {self.first_name}, {self.last_name}"
+              f" age of: {self.age}")
     
-#     def greet_user(self):
-#         print(f"Hello {self.first_name} {self.last_name}.")
+    def greet_user(self):
+        print(f"Hello {self.first_name} {self.last_name}.")
 
-#     def increment_login_attempts(self):
-#         self.login_attempts += 1
+    def increment_login_attempts(self):
+        self.login_attempts += 1
 
-#     def reset_login_attempts(self):
-#         self.login_attempts = 0
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+class Admin(User):
+    def __init__(self, first_name, last_name, age, privileges):
+        super().__init__(first_name, last_name, age)
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print(f"Admin's privileges: {self.privileges}")
+
+admins_privileges = ['Can ban user', 'Can add user', 'Can remove user']
+admin = Admin('Peter', 'Veducko', 28, admins_privileges)
+admin.show_privileges()
+admin.describe_user()
 
 # user_1 = User('Joe', 'Pesci', 20)
 # user_2 = User('Alfredo', 'Fetuccini', 41)
