@@ -94,3 +94,15 @@
 
 # print(f"User log in attempts resets to: {user_1.login_attempts}")
 
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+    
+    def get_descriptive_name(self):
+        return (f"My car is: {self.make}, {self.model}, {self.year}".title())
+        
+    
+my_new_car = Car('renault', 'clio', 2000)
+print(my_new_car.get_descriptive_name())
